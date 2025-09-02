@@ -1,31 +1,29 @@
 import { PROJECT_TITLE } from "~/lib/constants";
 
 export async function GET() {
-  const appUrl =
-    process.env.NEXT_PUBLIC_URL ||
-    `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  const appUrl = process.env.NEXT_PUBLIC_URL;
 
   const config = {
     accountAssociation: {
       header:
-        "eyJmaWQiOjEzNTk2LCJ0eXBlIjoiY3VzdG9keSIsImtleSI6IjB4ODE3MzE4RDZmRkY2NkExOGQ4M0ExMzc2QTc2RjZlMzBCNDNjODg4OSJ9",
+        "eyJmaWQiOjg2OTk5OSwidHlwZSI6ImN1c3RvZHkiLCJrZXkiOiIweDc2ZDUwQjBFMTQ3OWE5QmEyYkQ5MzVGMUU5YTI3QzBjNjQ5QzhDMTIifQ",
       payload:
-        "eyJkb21haW4iOiJmYXJjYXN0ZXItbWluaWFwcC10ZW1wbGF0ZS52ZXJjZWwuYXBwIn0",
+        "eyJkb21haW4iOiJzb3BoaWEtYnVpbGRlci1lY29ub215LW5mdC52ZXJjZWwuYXBwIn0",
       signature:
-        "MHg5ZjkyZTdkNjRmZTNhNTE4YTEzOTBmZTdlYzAwOWQzODUzZWM2N2RmOTZiYjg1MzAwOGRlZDExNjVmOGE5OGVlNDQyYmI0MDU3OTI0ZmEzOGE3N2NlYWRiYThiMTRiN2IzMTY5N2ZjYWVlZGM3MTE1YWNiMTFmYjc2Y2EzYTc0YzFj",
+        "MHg0NTkwN2IxZGJiMWZiMmY0YTRkY2QxMzkxZDEwZWI0NGY1YTBkNTAwNWE2NjEzYzRiMjI2MmRhMmFjODkzM2E4MmJhNTgzMzAyYmU0NjYzMDc5MTcyOTlkMDMxZmI0Y2M3ZDUzYzVkMGU2MTk5MDdiNDU1YTU1Y2E1NTQxYWQzMDFi",
     },
-    miniapp: {
+    frame: {
       version: "1",
       name: PROJECT_TITLE,
       iconUrl: `${appUrl}/icon.png`,
       homeUrl: appUrl,
-      imageUrl: `${appUrl}/frames/hello/opengraph-image`,
-      ogImageUrl: `${appUrl}/frames/hello/opengraph-image`,
+      imageUrl: `${appUrl}/og.png`,
       buttonTitle: "Open",
       splashImageUrl: `${appUrl}/splash.png`,
-      splashBackgroundColor: "#f7f7f7",
+      splashBackgroundColor: "#555555",
       webhookUrl: `${appUrl}/api/webhook`,
-      primaryCategory: "social",
+      primaryCategory: "art-creativity",
+      tags: ["nft", "celo", "minting", "art", "builder"],
     },
   };
 
